@@ -3,6 +3,7 @@ package com.example.bottomactionbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -31,6 +32,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        Intent i;
+
+        switch (v.getId()){
+            case R.id.bank_card : i = new Intent(this,Bank.class); startActivity(i); break;
+            case R.id.idea_card : i = new Intent(this,Ideas.class); startActivity(i); break;
+            case R.id.add_card : i = new Intent(this,Add.class); startActivity(i); break;
+            case R.id.link_card : i =new Intent(this,Links.class); startActivity(i); break;
+            case R.id.wifi_card : i =   new Intent(this,Wifi.class); startActivity(i);  break;
+            default: break;
+        }
 
     }
 }
